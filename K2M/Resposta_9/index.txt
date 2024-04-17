@@ -1,0 +1,19 @@
+Um método estático é um tipo de método em uma classe que pertence à própria classe, em vez de pertencer a uma instância
+específica dessa classe. Isso significa que você pode chamar um  método estático diretamente na classe,sem precisar 
+criar um objeto dessa classe primeiro.
+
+Um exemplo de uso seria em uma classe matematica com um método estático para somar dois números:
+
+
+public class Matematica {
+    public static int somar(int a, int b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int resultado = Matematica.somar(5, 3);
+        System.out.println("O resultado da soma é: " + resultado);
+    }
+}

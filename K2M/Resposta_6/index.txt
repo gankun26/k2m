@@ -1,0 +1,38 @@
+Polimorfismo é um principio do qual as classes derivadas de uma unica classe base são capazes de invocar metodos que,
+embora apresentem a mesma assinatura, comportam-se diferentemente das classes derivadas.
+
+O polimorfismo permite que atributos e objetos possam ser utilizados de formas distintas, porém com implementação 
+logica diferente. 
+
+Exemplo:  Podemos ter uma classe Vendedor e outra Gerente e ambas tem como base uma chamada Pessoa, com um metodo
+chamado CalcularVendas. Se este método se comportar de maneira diferente para as chamadas feitas a partir da instancia 
+Vendedor e para as chamadas feitas a partir da instancia Gerente, ele sera considerado um metodo polimorfico. Sendo
+assim um metodo de varias formas.
+
+este seria um exemplo de caso:
+
+interface Trabalhador {
+    void lidarComClientes();
+}
+
+class Vendedor implements Trabalhador {
+    public void lidarComClientes() {
+        System.out.println("O vendedor está ajudando o cliente a escolher um produto.");
+    }
+}
+
+class Gerente implements Trabalhador {
+    public void lidarComClientes() {
+        System.out.println("O gerente está resolvendo um problema do cliente.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Trabalhador funcionario1 = new Vendedor();
+        Trabalhador funcionario2 = new Gerente();
+
+        funcionario1.lidarComClientes(); // Saída: O vendedor está ajudando o cliente a escolher um produto.
+        funcionario2.lidarComClientes(); // Saída: O gerente está resolvendo um problema do cliente.
+    }
+}

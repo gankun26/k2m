@@ -1,0 +1,46 @@
+Herança é um conceito na programação orientada a objetos onde uma classe pode herdar características (atributos e métodos) de outra classe.
+A classe que herda é chamada de classe filha ou subclasse e a classe que é herdada é chamada de classe pai ou superclasse.
+
+Podemos pensar na herança como uma árvore genealógica. Você pode herdar características de seus pais. Exemplo, se seu pai tem cabelos castanhos,
+é provável que você também tenha cabelos castanhos.
+
+Um exemplo: 
+
+class Animal {
+    void comer() {
+        System.out.println("Animal está comendo.");
+    }
+
+    void dormir() {
+        System.out.println("Animal está dormindo.");
+    }
+}
+
+class Cachorro extends Animal {
+    void latir() {
+        System.out.println("Cachorro está latindo.");
+    }
+}
+
+class Gato extends Animal {
+    void miar() {
+        System.out.println("Gato está miando.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Cachorro cachorro = new Cachorro();
+        Gato gato = new Gato();
+
+        cachorro.comer(); // Saída: Animal está comendo.
+        cachorro.latir(); // Saída: Cachorro está latindo.
+
+        gato.comer(); // Saída: Animal está comendo.
+        gato.miar(); // Saída: Gato está miando.
+    }
+}
+
+
+No exemplo acima tanto as classes Cachorro e Gato herdam os métodos Comer e Dormir da classe Animal. Isso permite que tanto cachorro e gato
+possam comer e dormir, além de terem seus comportamentos específicos.

@@ -1,0 +1,14 @@
+Uma classe abstrata é um esboço para outras classes. Ela pode conter métodos concretos (com implementações)
+e métodos abstratos (sem implementações), que devem ser definidos pelas classes que as estendem. Uma classe abstrata 
+pode ter variaveis de instancia, construtores e métodos normais.
+
+Uma interface é como um contrato. Ela define métodos que uma classe deve implementar, mas não fornece nenhuma
+implementação. Uma interface pode ter apenas métodos abstratos e constantes (variáveis estáticas finais).
+Qualquer classe que implemente uma interface deve  fornecer uma implementação para todos os métodos definidos na
+interface.
+
+Em resumo, uma classe abstrata pode conter métodos concretos e abstratos, enquanto uma interface só pode conter
+métodos abstratos.
+Uma classe pode estender apenas uma classe abstrata, mas pode implementar várias interfaces.
+As classes que estendem uma classe abstrata herdam seus membros, enquanto as classes que implementam uma interface
+devem fornecer implementações para todos os métodos da interface.
